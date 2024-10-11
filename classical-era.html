@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical Era</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Vintage Theme */
+        body {
+            font-family: 'Patrick Hand', cursive; /* Handwriting font */
+            background-color: #000000; /* Light background */
+            color: #ccb6b6; /* Dark text */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+        header {
+            background-color: #2d2d2d; /* Dark background for header */
+            padding: 20px;
+            text-align: center;
+            color: white;
+            border-bottom: 3px solid #333;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-family: 'Patrick Hand', cursive; /* Handwritten font for title */
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .home-button {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        /* Main content */
+        main {
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #291504; /* White background for content */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-family: 'Patrick Hand', cursive; /* Handwritten font for headings */
+            color: #95c076; /* Darker color for subheadings */
+            margin-top: 40px; /* Spacing above subheadings */
+            animation: fadeIn 1s ease; /* Animation for headings */
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            animation: fadeIn 1s ease; /* Animation for paragraphs */
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* For animation effect */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for images */
+        }
+
+        .image-container.show {
+            opacity: 1; /* Fade in */
+            transform: translateY(0); /* Move to original position */
+        }
+
+        /* Loading screen */
+        #loading-screen {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-color: #8b7d70; /* Loading screen background */
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 1s ease;
+        }
+
+        #loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease, visibility 0s 1s;
+        }
+
+        .loading-text {
+            font-family: 'Patrick Hand', cursive; /* Handwritten font for loading text */
+            font-size: 2em;
+            color: white;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading screen -->
+    <div id="loading-screen">
+        <div class="loading-text">Loading...</div>
+    </div>
+
+    <!-- Main page content -->
+    <header>
+        <h1>Classical Era</h1>
+        <nav>
+            <a href="index.html" class="home-button">← Back to Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Ancient Greece</h2>
+        <p>
+            The Classical Era in Greece was defined by the development of city-states, most notably Athens and Sparta. Athens became the birthplace of democracy, while Sparta was known for its militaristic society. Greek philosophy flourished, with thinkers like Socrates, Plato, and Aristotle laying the foundations for Western philosophy and science.
+        </p>
+        <div class="image-container" id="image-greece">
+            <img src="./images/ancient-greece.jpg" alt="Ancient Greece" class="classical-image">
+        </div>
+
+        <h2>Mauryan and Gupta Dynasties</h2>
+        <h3>Mauryan Dynasty</h3>
+        <p>
+            The Mauryan Dynasty, founded by Chandragupta Maurya, was one of the largest empires in India. Under the rule of Ashoka the Great, Buddhism spread across the empire, and Ashoka himself became a proponent of non-violence and religious tolerance.
+        </p>
+        <div class="image-container" id="image-mauryan">
+            
+        </div>
+
+        <h3>Gupta Dynasty</h3>
+        <p>
+            The Gupta Dynasty, often referred to as the "Golden Age" of India, saw advancements in science, literature, and art. This era was marked by achievements in mathematics and astronomy, and it is known for the decentralized governance system that allowed local rulers significant autonomy.
+        </p>
+        <div class="image-container" id="image-gupta">
+            <img src="./images/gupta-dynasty.jpg" alt="Gupta Dynasty" class="classical-image">
+        </div>
+
+        <h2>Ancient Egypt</h2>
+        <p>
+            Ancient Egypt was ruled by powerful pharaohs like Ramses II and Hatshepsut, and its society was deeply rooted in religion and mythology. Monuments such as the Pyramids of Giza and temples like Karnak and Luxor are lasting legacies of Egyptian architectural ingenuity.
+        </p>
+        <div class="image-container" id="image-egypt">
+            <img src="./images/ancient-egypt.jpg" alt="Ancient Egypt" class="classical-image">
+        </div>
+    </main>
+
+    <!-- JavaScript for the loading screen and image animations -->
+    <script>
+        window.addEventListener('load', function () {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.classList.add('hidden');
+
+            // Show images with animation after loading
+            document.querySelectorAll('.image-container').forEach(container => {
+                container.classList.add('show');
+            });
+        });
+
+        // Optional: Show loading screen on page exit
+        window.addEventListener('beforeunload', function () {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

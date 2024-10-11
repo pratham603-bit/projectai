@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #4a90e2;
+    padding: 10px;
+    position: relative;
+    color: white;
+}
+
+.home-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.home-button img {
+    width: 40px;
+    height: 40px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.era-card {
+    width: 200px;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.era-card:hover {
+    transform: scale(1.05);
+}
+
+.era-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.era-card a {
+    text-decoration: none;
+    color: #4a90e2;
+    font-size: 1.1em;
+}
+
+.era-card h3 {
+    margin: 10px 0;
+}

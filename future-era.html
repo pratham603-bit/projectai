@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Era</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modern Futuristic Theme with Standard Fonts */
+        body {
+            font-family: 'Orbitron', sans-serif; /* Futuristic font */
+            background: linear-gradient(135deg, #ff007f, #00bfff); /* Vibrant gradient background */
+            color: #333; /* Dark text for contrast */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white header */
+            padding: 20px;
+            text-align: center;
+            color: #007acc; /* Blue text */
+            border-bottom: 2px solid #007acc; /* Blue border */
+            box-shadow: 0 0 10px rgba(0, 122, 204, 0.5); /* Shadow effect */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            letter-spacing: 2px; /* Spacing between letters */
+            animation: fadeIn 1s ease; /* Fade in animation */
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .home-button {
+            text-decoration: none;
+            color: #007acc;
+            font-size: 1.2em;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center; /* Center logo vertically */
+        }
+
+        .home-button img {
+            width: 30px; /* Adjust size as needed */
+            margin-right: 8px; /* Space between logo and text */
+        }
+
+        .home-button:hover {
+            color: #005999; /* Change color on hover */
+        }
+
+        main {
+            padding: 40px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff; /* Main content background */
+            border: 1px solid #ddd; /* Border around main content */
+            box-shadow: 0 0 20px rgba(0, 122, 204, 0.3); /* Shadow effect */
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 2.2em; /* Size for headings */
+            color: #007acc; /* Blue color */
+            margin-top: 30px;
+            border-bottom: 2px solid #007acc; /* Underline */
+            padding-bottom: 5px;
+            animation: fadeIn 1s ease; /* Fade in */
+            transform: scale(1); /* Initial scale for enlarging effect */
+            transition: transform 0.3s ease; /* Transition for scaling */
+        }
+
+        h2:hover {
+            transform: scale(1.05); /* Enlarging effect on hover */
+        }
+
+        h3 {
+            font-size: 1.5em; /* Smaller heading size */
+            margin-top: 20px;
+            color: #007acc; /* Blue color */
+            animation: fadeIn 1s ease; /* Fade in */
+        }
+
+        p {
+            font-size: 1.1em; /* Paragraph text size */
+            margin-bottom: 20px; /* Space between paragraphs */
+            animation: fadeIn 1s ease; /* Fade in */
+            transition: transform 0.3s ease; /* Transition for scaling */
+        }
+
+        p:hover {
+            transform: scale(1.05); /* Enlarging effect on hover */
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0; /* Spacing for image container */
+            opacity: 0; /* Initially hidden */
+            transform: scale(0.8); /* Scale down for transition effect */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for images */
+        }
+
+        .image-container.show {
+            opacity: 1; /* Fade in */
+            transform: scale(1); /* Scale to original size */
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> <!-- Link to the font -->
+</head>
+<body>
+    <header>
+        <h1>Future Era</h1>
+        <nav>
+            <a href="index.html" class="home-button">
+                <img src="./images/new-home-logo.png" alt="Home Logo"/> <!-- New Home Logo -->
+                Home
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Quantum and Cloud Computing</h2>
+        <p>
+            Quantum computing utilizes quantum bits (qubits) to perform calculations at speeds far beyond traditional computers, potentially solving complex problems in fields like cryptography, materials science, and medicine. Cloud computing enables users to access and store data on remote servers, offering scalable and flexible computing resources for both businesses and individuals.
+        </p>
+        <div class="image-container" id="image-quantum-cloud">
+            <img src="./images/qc.jpg" alt="Quantum and Cloud Computing" class="classical-image">
+        </div>
+
+        <h2>Artificial Intelligence and Machine Learning</h2>
+        <p>
+            Artificial intelligence systems are becoming increasingly sophisticated, capable of performing tasks that require human intelligence, such as natural language processing, image recognition, and autonomous driving. Machine learning, a subset of AI, involves training algorithms to recognize patterns and make decisions based on data, with applications ranging from recommendation systems to predictive analytics.
+        </p>
+        <div class="image-container" id="image-ai-ml">
+            <img src="./images/aiml.png" alt="Artificial Intelligence and Machine Learning" class="classical-image">
+        </div>
+
+        <h2>Nano-Technology</h2>
+        <p>
+            Nanotechnology involves manipulating matter at the nanoscale to create materials with unique properties, such as increased strength, conductivity, and reactivity. This technology holds promise for revolutionizing medicine, with potential applications in drug delivery, diagnostics, and tissue engineering.
+        </p>
+        <div class="image-container" id="image-nanotechnology">
+            <img src="./images/nct.jpg" alt="Nano-Technology" class="classical-image">
+        </div>
+        <footer style="text-align: center; padding: 20px; background-color: rgba(204, 52, 52, 0.9);">
+            <p style="font-size: 2em; color: #e1ff00;">Created by [Pratham D(20241CSE0016)]</p>
+        </footer>
+        
+    </main>
+
+    <!-- JavaScript for image animations -->
+    <script>
+        // Show images with animation after loading
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.image-container').forEach(container => {
+                container.classList.add('show');
+            });
+        });
+    </script>
+</body>
+</html>

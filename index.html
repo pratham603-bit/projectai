@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Travel Through History</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4a90e2;
+            padding: 10px;
+            position: relative;
+            color: white;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .home-button img {
+            width: 40px;
+            height: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .era-card {
+            width: 200px;
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .era-card:hover {
+            transform: scale(1.05);
+        }
+
+        .era-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .era-card a {
+            text-decoration: none;
+            color: #4a90e2;
+            font-size: 1.1em;
+        }
+
+        .era-card h3 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="home-button">
+            <img src="./images/home.jpg" alt="Home">
+        </a>
+        <h1>Time Travel Through History</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="era-card">
+                <a href="stone-age.html">
+                    <img src="./images/stone-age.jpg" alt="Stone Age">
+                    <h3>Stone Age</h3>
+                    <p>3.3 million to 5,000 years ago</p>
+                </a>
+            </div>
+
+            <div class="era-card">
+                <a href="classical-era.html">
+                    <img src="./images/classical-era.jpg" alt="Classical Era">
+                    <h3>Classical Era</h3>
+                    <p>500 BC to 500 AD</p>
+                </a>
+            </div>
+
+            <div class="era-card">
+                <a href="medieval-era.html">
+                    <img src="./images/medieval-era.png" alt="Medieval Era">
+                    <h3>Medieval Era</h3>
+                    <p>500 AD to 1500 AD</p>
+                </a>
+            </div>
+
+            <div class="era-card">
+                <a href="early-modern-era.html">
+                    <img src="./images/early-modern-era.jpg" alt="Early Modern Era">
+                    <h3>Early Modern Era</h3>
+                    <p>1500 AD to present</p>
+                </a>
+            </div>
+
+            <div class="era-card">
+                <a href="future-era.html">
+                    <img src="./images/future-era.jpg" alt="Future Era">
+                    <h3>Future Era</h3>
+                    <p>Present to future</p>
+                </a>
+            </div>
+            <footer style="text-align: center; padding: 20px; background-color: rgba(255, 255, 255, 0.9);">
+                <p  style="font-size: 2em; color: #f7a100cb;"> <span class="bold">Created by Pratham D[20241CSE0016]</span></p>
+            </footer>
+            
+        </section>
+    </main>
+</body>
+</html>

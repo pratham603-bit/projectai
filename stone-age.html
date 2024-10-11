@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Age</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Existing styles + new animations */
+         /* Retro and Old-Looking Style */
+         body {
+            font-family: 'Georgia', serif;
+            background-color: #f7f2dc;
+            color: #3b3b3b;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #8b7d70;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        
+
+        .home-button {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        main {
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff8e1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-family: 'Courier New', Courier, monospace;
+            color: #6b4f4f;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+
+        /* Add subtle texture */
+        body, main {
+            background-image: url('./images/parchment-texture.jpg');
+            background-size: cover;
+        }
+
+        /* Subtle shadow effect for the box */
+        main {
+            border: 2px solid #d0c7b1;
+        }
+
+        /* Image styling */
+        .stone-age-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container {
+            text-align: center;
+        }
+        #loading-screen {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-color: #8b7d70;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 1s ease;
+        }
+
+        #loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease, visibility 0s 1s;
+        }
+
+        .loading-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2em;
+            color: white;
+        }
+
+        .stone-age-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading screen -->
+    <div id="loading-screen">
+        <div class="loading-text">Loading...</div>
+    </div>
+
+    <header>
+        <h1>Stone Age: 3.3 Million to 5,000 Years Ago</h1>
+        <nav>
+            <a href="index.html" class="home-button">← Back to Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <main>
+            
+            <h2>The Paleolithic Era (Old Stone Age)</h2>
+            <p>The Paleolithic era, or the Old Stone Age, marks the earliest phase of human history. During this time, early humans relied heavily on their ingenuity to create simple tools made from stone, bone, and wood. These tools, including hand-axes, scrapers, and spearheads, played an essential role in hunting and survival.</p>
+        
+        <p data-aos="fade-right">The Paleolithic era, or the Old Stone Age...</p>
+
+        <div class="image-container" data-aos="zoom-in">
+            <img src="./images/paleolithic-tools.jpg" alt="Paleolithic Stone Tools" class="stone-age-image" data-speed="3">
+            <p><em>Early Paleolithic stone tools</em></p>
+        </div>
+
+        <!-- Other content -->
+        <p>In terms of lifestyle, humans were predominantly hunter-gatherers. They lived in small, nomadic groups, constantly moving in search of food. Temporary shelters were constructed as they followed migrating herds and foraged for edible plants. The Paleolithic people also made remarkable contributions to art and culture, as evidenced by the famous cave paintings and carved figures like the Venus figurines, hinting at their early religious and creative expressions.</p>
+
+        <h2>The Mesolithic Era (Middle Stone Age)</h2>
+        <p>In the Mesolithic era, human tools became more refined, with the development of microlith technology. This advancement allowed for the creation of smaller, more precise stone blades that were attached to wooden handles, forming composite tools for improved functionality.</p>
+        <p>The Mesolithic era also saw significant lifestyle changes, as some communities began to settle down and experiment with agriculture. Early forms of plant cultivation and animal domestication started to take shape, leading to the gradual transition from a nomadic to a more settled way of life. Art during this era continued to evolve, with decorated tools and personal ornaments becoming more common, reflecting more complex social structures and ritual practices.</p>
+
+        <h2>The Neolithic Era (New Stone Age)</h2>
+        <p>The Neolithic era is perhaps the most transformative period of the Stone Age. During this time, polished stone tools and pottery became widespread, while the invention of the plow revolutionized farming. These innovations made food production more efficient, which in turn allowed populations to grow and settlements to become more permanent.</p>
+
+        <!-- Image for Neolithic Era -->
+        <div class="image-container">
+            <img src="./images/neolithic-structure.jpg" alt="Neolithic Structure" class="stone-age-image">
+            <p><em>Neolithic Megalithic Structure (Stonehenge)</em></p>
+        </div>
+
+        <p>With the rise of farming communities came advancements in art and architecture. Megalithic structures, such as Stonehenge and Göbekli Tepe, suggest that people were beginning to engage in more complex religious and ceremonial activities. The Neolithic era also saw the development of crafts like weaving and pottery, which not only improved daily life but also marked the beginning of human civilization as we know it.</p>
+
+       
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, easing: 'ease-in-out', once: true });
+
+        // Mouse movement parallax effect
+        document.addEventListener('mousemove', function (e) {
+            const images = document.querySelectorAll('.stone-age-image');
+            images.forEach(image => {
+                const speed = image.getAttribute('data-speed');
+                const x = (window.innerWidth - e.pageX * speed) / 100;
+                const y = (window.innerHeight - e.pageY * speed) / 100;
+                image.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+
+        // Loading screen
+        window.addEventListener('load', function () {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.classList.add('hidden');
+        });
+
+        window.addEventListener('beforeunload', function () {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Modern Era</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modern Futuristic Theme */
+        body {
+            font-family: 'Arial', sans-serif; /* Modern font */
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1f1f1f; /* Darker header background */
+            padding: 20px;
+            text-align: center;
+            color: #00ffcc; /* Neon green text */
+            border-bottom: 2px solid #00ffcc; /* Neon border */
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5); /* Glow effect */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            letter-spacing: 2px; /* Spacing between letters */
+            animation: fadeIn 1s ease; /* Fade in animation */
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .home-button {
+            text-decoration: none;
+            color: #00ffcc;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .home-button:hover {
+            color: #ffffff; /* Change color on hover */
+        }
+
+        main {
+            padding: 40px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #2e2e2e; /* Main content background */
+            border: 1px solid #444; /* Border around main content */
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.3); /* Shadow effect */
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #00ffcc; /* Neon green */
+            margin-top: 30px;
+            border-bottom: 2px solid #00ffcc; /* Underline */
+            padding-bottom: 5px;
+            animation: fadeIn 1s ease; /* Fade in */
+        }
+
+        h3 {
+            font-size: 1.5em; /* Smaller heading size */
+            margin-top: 20px;
+            color: #00ffcc; /* Neon green */
+            animation: fadeIn 1s ease; /* Fade in */
+        }
+
+        p {
+            font-size: 1.1em; /* Paragraph text size */
+            margin-bottom: 20px; /* Space between paragraphs */
+            animation: fadeIn 1s ease; /* Fade in */
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0; /* Spacing for image container */
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* For animation effect */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for images */
+        }
+
+        .image-container.show {
+            opacity: 1; /* Fade in */
+            transform: translateY(0); /* Move to original position */
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Early Modern Era</h1>
+        <nav>
+            <a href="index.html" class="home-button">🏠 Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Industrial Revolution</h2>
+        <p>
+            The Industrial Revolution marked a turning point in history with the introduction of machinery and the factory system that revolutionized production processes. Key inventions included the spinning jenny, steam engine, and power loom.
+        </p>
+        <p>
+            Urbanization occurred as cities grew rapidly, with people moving from rural areas to work in factories. This migration led to significant social changes and the rise of new social classes.
+        </p>
+        <p>
+            The economic impact of this period was profound, as the shift from agrarian economies to industrial economies increased production and trade.
+        </p>
+        <div class="image-container" id="image-industrial-revolution">
+            <img src="./images/industrial_image.png" alt="Industrial Revolution" class="classical-image">
+        </div>
+
+        <h2>The Printing Press</h2>
+        <p>
+            Johannes Gutenberg's invention of the movable-type printing press around 1440 revolutionized the production of books and written material. It enabled the mass production of books, making them more accessible and affordable, thereby facilitating the spread of ideas and literacy.
+        </p>
+        <p>
+            The availability of printed material fueled the Renaissance, Reformation, and scientific revolution by making knowledge more widely available, contributing to the intellectual growth of society.
+        </p>
+        <div class="image-container" id="image-printing-press">
+            <img src="./images/printing.jpg" alt="Industrial Revolution" class="classical-image">
+        </div>
+
+
+        <h2>Literacy and Language</h2>
+        <p>
+            The printing press played a crucial role in increasing literacy rates across Europe and beyond, allowing more people to read and write. Printed books contributed to the standardization of languages, as regional dialects unified into more consistent forms.
+        </p>
+        <p>
+            Additionally, the demand for education grew, leading to the establishment of more schools and universities, further promoting literacy and knowledge.
+        </p>
+        <div class="image-container" id="image-literacy-language">
+            <img src="./images/ll.jpeg" alt="image-literacy-language" class="classical-image">
+        </div>
+
+        <h2>Use of Computers</h2>
+        <p>
+            The development of early computers like the ENIAC in the 1940s marked the beginning of the digital age, enabling machines to perform complex calculations at unprecedented speeds. The invention of personal computers in the 1970s and 1980s, such as the Apple II and IBM PC, revolutionized how people interacted with technology.
+        </p>
+        <p>
+            The advent of the internet in the late 20th century connected the world in ways previously unimaginable, transforming communication, commerce, and access to information.
+        </p>
+
+        <div class="image-container" id="computer">
+            <img src="./images/cc.jpg" alt="Industrial Revolution" class="classical-image">
+        </div>
+        
+    </main>
+
+    <!-- JavaScript for image animations -->
+    <script>
+        // Show images with animation after loading
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.image-container').forEach(container => {
+                container.classList.add('show');
+            });
+        });
+    </script>
+</body>
+</html>
